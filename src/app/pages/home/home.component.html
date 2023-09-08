@@ -1,0 +1,15 @@
+
+<div>
+    <app-header (toggleSidebar)="sideNav.toggle()" class="header"></app-header>
+</div>
+
+    <mat-sidenav-container  [ngStyle] = "{ 'position' : sideNav.opened ? 'fixed' : 'relative'}">
+        <mat-sidenav mode="over" #sideNav >
+        </mat-sidenav>
+        <mat-sidenav-content >
+            <app-movie-list></app-movie-list>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+<app-footer></app-footer>
+
